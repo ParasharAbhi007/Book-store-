@@ -1,0 +1,5 @@
+service:
+  name: testdeploy
+  identifier: testdeploy
+  orgIdentifier: AbhiOrg
+  projectIdentifier: CSETest1
