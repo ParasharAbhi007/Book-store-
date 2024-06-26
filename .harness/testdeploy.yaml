@@ -3,3 +3,26 @@ service:
   identifier: testdeploy
   orgIdentifier: AbhiOrg
   projectIdentifier: CSETest1
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: test2
+          sources:
+            - spec:
+                connectorRef: frg
+                artifactDirectory: /
+                artifactPath: <+input>
+                repository: iistest
+                repositoryFormat: generic
+              identifier: test
+              type: ArtifactoryRegistry
+            - spec:
+                connectorRef: frg
+                artifactDirectory: /
+                artifactPath: <+input>
+                repository: testing-npm-remote
+                repositoryFormat: generic
+              identifier: test2
+              type: ArtifactoryRegistry
+    type: Ssh
