@@ -25,3 +25,8 @@ template:
                 environmentVariables: []
                 outputVariables: []
               timeout: 10m
+      environment:
+        environmentRef: ECS_INFRA
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: ee
