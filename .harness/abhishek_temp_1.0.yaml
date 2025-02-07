@@ -24,6 +24,9 @@ template:
                     script: echo "hi"
                 environmentVariables: []
                 outputVariables: []
+                outputAlias:
+                  key: <+input>
+                  scope: Pipeline
               timeout: 10m
       environment:
         environmentRef: ECS_INFRA
