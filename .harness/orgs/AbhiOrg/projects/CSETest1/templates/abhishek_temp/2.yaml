@@ -1,0 +1,35 @@
+template:
+  name: abhishek_temp
+  identifier: abhishek_temp
+  type: Stage
+  projectIdentifier: CSETest1
+  orgIdentifier: AbhiOrg
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: "echo \"hii\" "
+                environmentVariables: []
+                outputVariables: []
+                outputAlias:
+                  key: <+input>
+                  scope: Pipeline
+              timeout: 10m
+      environment:
+        environmentRef: ECS_INFRA
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: ee
+  versionLabel: "2"
